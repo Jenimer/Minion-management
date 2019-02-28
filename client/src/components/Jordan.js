@@ -1,6 +1,7 @@
 import React, { Fragment } from 'react';
 import { Segment } from 'semantic-ui-react';
 import Navbar from './Navbar';
+import Form from './Form';
 
   const Jordan = () => (
     <Fragment>
@@ -14,6 +15,7 @@ import Navbar from './Navbar';
       </h1>
     </Segment>
     <Navbar/>
+    <Form/>
     </Fragment>
   );
 

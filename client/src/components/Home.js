@@ -10,11 +10,11 @@ class Home extends React.Component {
       <Fragment>
         <Segment 
           textAlign ='center'
-          inverted color = 'teal'
+          inverted color = 'green'
           size = 'massive'
           >
             <h1>
-              Welcome to the Child Management System
+              Welcome to the Minion Management System
             </h1>
         </Segment>
            <Navbar/>

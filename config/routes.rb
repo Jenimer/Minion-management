@@ -1,6 +1,11 @@
 Rails.application.routes.draw do
+  # get 'task/index'
+  # get 'task/show'
+  # get 'task/create'
+  # get 'task/update'
+  # get 'task/destroy'
   namespace :api do
-    resources :children
+    resources :tasks
   end
 
   #Do not place any routes below this one

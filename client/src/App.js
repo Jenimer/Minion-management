@@ -4,6 +4,7 @@ import Home from './components/Home';
 import Tyler from './components/Tyler';
 import Jordan from './components/Jordan';
 import Judy from './components/Judy';
+import Task from './components/Task';
 
 const App = () => (
   <Fragment>
@@ -11,7 +12,7 @@ const App = () => (
     <Route exact path="/tyler" component={Tyler} />
     <Route exact path="/jordan" component={Jordan} />
     <Route exact path="/judy" component={Judy} />
-    
+    <Route exact path="/task/:id" component={Task} />    
   </Fragment>
 );
 
