@@ -10,12 +10,12 @@ class Api::TasksController < ApplicationController
   end
 
   def create
-    task = Task.new(product_params)
+    task = Task.new(task_params)
 
     if task.save
       render json: task
     else
-      render json: task.errors, status 422
+      render json: task.errors, status: 422
     end
   end
 
@@ -23,7 +23,7 @@ class Api::TasksController < ApplicationController
     if task.update(task_params)
       render json: @task
     else
-      render json: @task.errors, status 422
+      render json: @task.errors, status: 422
     end
   end
 
@@ -40,5 +40,5 @@ class Api::TasksController < ApplicationController
       params.require(:task).permit(:name, :done)
     end
 
-  end
+ 
 end

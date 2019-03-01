@@ -5,7 +5,7 @@ import { Segment, Button } from 'semantic-ui-react';
 
 const Navbar =()=> (
 
-  <Segment inverted color = 'black' textAlign ='center'>
+  <Segment inverted  textAlign ='center'>
     <nav>
       <Button inverted color = 'green' as={Link} to="/">Home</Button>
       <Button inverted color = 'blue' as={Link} to="/tyler">Tyler</Button>

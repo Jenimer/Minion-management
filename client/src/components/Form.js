@@ -1,18 +1,45 @@
 import React from 'react';
-import { Container, Button } from 'semantic-ui-react';
-import axios from 'axios';  
+import { Button } from 'semantic-ui-react';
+
 
 class Form extends React.Component {
- 
-    render() {
+  defaultValues = { name: '' }
+  state = { ...this.defaultValues };
 
+  componentDidMount() {
+    if (this.props.id)
+      this.setState({...this.props})
+  }
+
+  handleSubmit = (e) => {
+    e.preventDefault();
+    const task = { ...this.state }
+    this.props.submit(task)
+    this.setState({ ...this.defaultValues })
+  };
+
+  handleChange = (e) => {
+    const { target: {name, value}} = e;
+    this.setState({ [name]: value })
+
+  };
+
+  
+    render() {
+      const { name } = this.state;
       return(
-        <Container textAlign = 'center'>
-          <h1>Task</h1>
-          <Button>Create</Button>
-          <Button>Edit</Button>
-          <Button>Delete</Button>        
-        </Container>
+        <form onSubmit={this.handleSubmit} >
+          <input
+            name='name'
+            placeholder='task'
+            value={name}
+            onChange={this.handleChange}
+            required
+          />
+
+        
+          <Button>Add</Button>        
+        </form>
       )
     }
 
